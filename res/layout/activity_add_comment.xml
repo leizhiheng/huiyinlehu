@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title_layout" />
+
+    <com.huiyin.wight.NestScrollView
+        android:id="@+id/scoroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white" >
+
+        <com.huiyin.wight.MyListView
+            android:id="@+id/lv_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#E6E6E6"
+            android:dividerHeight="15dp"
+            android:listSelector="@android:color/transparent" />
+    </com.huiyin.wight.NestScrollView>
+
+</LinearLayout>

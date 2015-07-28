@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/margin_size_8dp"
+        android:layout_centerVertical="true"
+        >
+
+        <TextView
+            android:id="@+id/my_wallet_detail_item_time"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/gray"
+            tools:text="2015-6-8"
+            android:layout_marginBottom="@dimen/margin_size_8dp"/>
+
+        <TextView
+            android:id="@+id/my_wallet_detail_item_content"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            tools:text="消费；订单编号：123456789"
+            android:layout_below="@+id/my_wallet_detail_item_time"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/my_wallet_detail_item_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="+  300"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_size_8dp"/>
+</RelativeLayout>

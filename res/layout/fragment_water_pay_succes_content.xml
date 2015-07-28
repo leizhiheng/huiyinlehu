@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/water_payment_succes_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_size_8dp"
+        android:text="缴费成功!"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_size_8dp"
+        android:gravity="center"
+        android:text="已通过短信的方式发送到您的手机号码里，请注意查收!"
+        android:textColor="@color/exchange_text_color"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/water_payment_succes_consumor"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/exchange_text_color"
+        android:textSize="14sp"
+        tools:text="缴费户号: 0000 0000 0000 00" />
+
+    <TextView
+        android:id="@+id/water_payment_succes_money"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_size_8dp"
+        android:gravity="center"
+        android:textColor="@color/exchange_text_color"
+        android:textSize="14sp"
+        tools:text="缴费金额: 213元" />
+
+    <ImageView
+        android:id="@+id/water_payment_succes_way"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pay_weixin" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_8dp" >
+
+        <ImageView
+            android:id="@+id/water_payment_succes_close"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="@dimen/margin_size_8dp"
+            android:src="@drawable/gbym" />
+
+        <ImageView
+            android:id="@+id/water_payment_succes_tomain"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:src="@drawable/fhsy" />
+    </LinearLayout>
+
+</LinearLayout>

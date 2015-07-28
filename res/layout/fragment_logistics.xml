@@ -1,0 +1,125 @@
+<com.huiyin.wight.FixScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                                 xmlns:tools="http://schemas.android.com/tools"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="match_parent"
+                                 android:fadingEdge="none"
+                                 android:overScrollMode="never"
+                                 tools:context="com.huiyin.ui.user.order.LogisticsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/gray"
+            android:visibility="visible"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="#ffe7e7e7"
+            android:visibility="visible"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/gray"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="配送公司："
+                android:textColor="@color/gray"
+                android:textSize="@dimen/common_big_text_size"/>
+
+            <TextView
+                android:id="@+id/tv_ps_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="汇银乐虎"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_big_text_size"/>
+
+            <TextView
+                android:id="@+id/tv_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="9846546498"
+                android:textSize="@dimen/common_big_text_size"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/light_gray"/>
+
+        <com.huiyin.wight.MyListView
+            android:id="@+id/lv_logistics"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/gray"
+            android:visibility="visible"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="#ffe7e7e7"
+            android:visibility="visible"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/gray"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="42dip"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dip"
+                android:paddingRight="12dip"
+                android:text="猜你喜欢"
+                android:textColor="#ff484848"
+                android:textSize="16sp"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/mebyLikeViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                android:background="@android:color/transparent"
+                android:persistentDrawingCache="animation"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</com.huiyin.wight.FixScrollView>
+

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tool="http://schemas.android.com/tools"
+             android:layout_width="120dp"
+             android:layout_height="match_parent"
+             android:layout_margin="@dimen/margin_size_4dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#fec100">
+
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="乐虎红包"
+                android:textColor="#fff"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                tool:text="10 元"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/image_line"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/text_get"
+            android:background="@color/white"/>
+
+        <TextView
+            android:id="@+id/text_get"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/image_line_right"
+            android:gravity="center_vertical|left"
+            android:text="立\n即\n领\n取"
+            android:textColor="@color/white"/>
+
+        <View
+            android:id="@+id/image_line_right"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_holded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/linqu"
+        android:layout_gravity="center"/>
+</FrameLayout>

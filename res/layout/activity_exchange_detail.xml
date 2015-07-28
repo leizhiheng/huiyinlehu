@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/common_title_layout" />
+
+    <ScrollView
+        android:layout_below="@+id/top"
+        android:layout_above="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+           <ImageView
+               android:id="@+id/exchange_goods_image"
+               android:layout_width="match_parent"
+               android:layout_height="200dp"
+               android:scaleType="fitCenter"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray7"/>
+
+            <TextView
+                android:id="@+id/exchange_goods_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                tools:text="含不锈钢茶壶盖"
+                android:textColor="@color/black" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/exchange_goods_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                tools:text="68元即购价值市场价299元的日本高不锈钢真空保温杯，含不锈钢茶壶盖"
+                android:textColor="@color/blue4" >
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/exchange_goods_integral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="积分  ：3900"
+                    android:textColor="@color/red"
+                    android:textSize="14sp" >
+                </TextView>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+                </View>
+
+                <TextView
+                    android:id="@+id/exchange_goods_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="乐虎价：￥3900.00"
+                    android:textColor="@color/exchange_text_color"
+                    android:textSize="14sp" >
+                </TextView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/gray7" >
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="兑换条件："
+                    android:textColor="@color/exchange_text_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/exchange_goods_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="所有会员等级，每人兑换一件"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:maxLines="3"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray7" >
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="兑换数量："
+                    android:textColor="@color/exchange_text_color"
+                    android:textSize="14sp" >
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/imageView_delete"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dip"
+                    android:background="@drawable/mashangjiesuan_03" />
+
+                <EditText
+                    android:id="@+id/et_num"
+                    android:layout_width="35dp"
+                    android:layout_height="26dp"
+                    android:layout_marginRight="5dip"
+                    android:background="@drawable/mashangjeiusan_06"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="#ff484848"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/imageView_add"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/mashangjiesuna_08" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:text="库存："
+                    android:textSize="14sp" >
+                </TextView>
+                <TextView
+                    android:id="@+id/exchange_goods_stock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    tools:text="442件"
+                    android:textSize="14sp" >
+                </TextView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/gray7" >
+            </View>
+
+            <TextView
+                android:id="@+id/exchange_goods_explan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="80dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="8dp"
+                android:text="兑换介绍"
+                android:textColor="@color/exchange_text_color" >
+            </TextView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/gray7"
+        android:id="@+id/bottom"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/exchange_goods_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ok_btn_bg"
+            android:gravity="center"
+            android:text="立即兑换"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</RelativeLayout>

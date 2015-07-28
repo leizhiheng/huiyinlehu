@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/common_title_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_title_bar_height"
+        android:background="@color/index_red">
+
+        <TextView
+            android:id="@+id/btn_back"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/com_return"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_lage_text_size"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxEms="10"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="查看物流"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_lage_text_size"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="订单编号："
+            android:textColor="@color/gray"
+            android:textSize="@dimen/common_big_text_size"/>
+
+        <TextView
+            android:id="@+id/tv_order_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9846546498"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_big_text_size"/>
+
+        <TextView
+            android:id="@+id/tv_order_status"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:text="9846546498"
+            android:textColor="@color/blue_color"
+            android:textSize="@dimen/common_big_text_size"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/light_gray"/>
+
+    <RelativeLayout
+        android:id="@+id/logistics_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <com.huiyin.wight.indicator.TabPageIndicator
+            android:id="@+id/logistics_indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/white"/>
+
+        <View
+            android:id="@+id/middle_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/logistics_indicator"
+            android:background="@color/light_gray">
+        </View>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/logistics_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/middle_line"/>
+    </RelativeLayout>
+
+</LinearLayout>

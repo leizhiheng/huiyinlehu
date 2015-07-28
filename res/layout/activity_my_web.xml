@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.huiyin.ui.web.MyWebActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:background="@color/index_red" >
+        <TextView
+            android:id="@+id/left_ib"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/com_return"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_lage_text_size" />
+
+        <TextView
+            android:id="@+id/middle_title_tv"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxEms="10"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="标题"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_lage_text_size"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/my_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_title"
+        android:background="@android:color/transparent"/>
+
+</RelativeLayout>

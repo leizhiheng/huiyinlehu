@@ -1,0 +1,28 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_layout"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray"/>
+
+    <com.huiyin.wight.XListView
+        android:id="@+id/my_scan_recorder_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0000"
+        android:cacheColorHint="#0000"
+        android:divider="@color/gray"
+        android:dividerHeight="0.5dp"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:listSelector="@drawable/list_item_drawable_bg"
+        android:scrollbars="none"
+        />
+</LinearLayout>

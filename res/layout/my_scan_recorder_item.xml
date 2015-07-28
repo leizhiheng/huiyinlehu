@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="120dp"
+              android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/my_scan_recorder_item_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="@dimen/margin_size_8dp"
+        android:src="@drawable/blue_cornor_bg"/>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_size_8dp"
+        android:layout_marginRight="@dimen/margin_size_8dp">
+
+        <TextView
+            android:id="@+id/my_scan_recorder_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="2"
+            tools:text="海尔空调"
+            android:textSize="16sp"
+            android:layout_marginBottom="@dimen/margin_size_8dp"
+            />
+
+        <TextView
+            android:id="@+id/my_scan_recorder_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            tools:text="1988"
+            android:layout_below="@+id/my_scan_recorder_item_title"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/my_scan_recorder_item_stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="降价"
+            android:layout_toRightOf="@+id/my_scan_recorder_item_price"
+            android:layout_alignBottom="@+id/my_scan_recorder_item_price"
+            android:layout_marginLeft="@dimen/margin_size_8dp"
+            android:textColor="@color/gray"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pop_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/list_content_view"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:background="@color/transparent"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/lv_reason"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:divider="@color/gray"
+            android:dividerHeight="0.1dp"
+            android:listSelector="@android:color/transparent" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/show_tip_textview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="8dip"
+        android:text="*请选择正确理由，以方便我们快速审核*"
+        android:textColor="@color/text_color_red"
+        android:textStyle="bold" />
+
+</LinearLayout>

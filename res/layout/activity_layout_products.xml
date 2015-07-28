@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/layout_tools"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        layout="@layout/layout_goods_detail_checkout" />
+
+    <ViewSwitcher
+        android:id="@+id/viewSwitcher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_tools" >
+
+        <FrameLayout
+            android:id="@+id/fragment_products"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <FrameLayout
+            android:id="@+id/fragment_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </ViewSwitcher>
+
+</RelativeLayout>

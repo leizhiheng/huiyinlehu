@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:minHeight="80dp"
+              android:orientation="vertical"
+              android:gravity="center_vertical"
+              >
+
+    <TextView
+        android:id="@+id/jifen_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="left|center"
+        android:singleLine="true"
+        tools:text="2015-6-8"
+        android:paddingLeft="4dp"
+        android:layout_marginLeft="@dimen/margin_size_8dp"
+        android:layout_marginRight="@dimen/margin_size_8dp"
+        android:textColor="@color/gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/margin_size_8dp"
+        android:layout_marginRight="@dimen/margin_size_8dp"
+        >
+
+        <ImageView
+            android:id="@+id/jifen_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/image_default_rectangle"/>
+
+
+        <TextView
+            android:id="@+id/jifen_item_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            tools:text="海尔空调"/>
+
+
+        <TextView
+            android:id="@+id/jifen_statu_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:background="@drawable/jf_statu_bg"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/jifen_value_id"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:singleLine="true"
+            tools:text="+18"
+            android:textColor="@color/red_color"/>
+    </LinearLayout>
+</LinearLayout>

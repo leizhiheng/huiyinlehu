@@ -1,0 +1,56 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_layout"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/my_wallet_detail_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_size_8dp"
+            android:gravity="center"
+            android:text="可用余额："/>
+
+        <TextView
+            android:id="@+id/my_wallet_detail_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/my_wallet_detail_tip"
+            android:gravity="center"
+            tools:text="6000"
+            android:layout_marginLeft="@dimen/margin_size_8dp"
+            android:textColor="@color/red_color"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray"/>
+
+    <com.huiyin.wight.XListView
+        android:id="@+id/my_wallet_detail_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0000"
+        android:cacheColorHint="#0000"
+        android:divider="@color/gray"
+        android:dividerHeight="0.5dp"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:listSelector="@drawable/list_item_drawable_bg"
+        android:scrollbars="none"
+        android:layout_marginTop="8dp"
+        />
+</LinearLayout>

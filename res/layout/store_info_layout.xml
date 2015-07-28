@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/EE"
+    android:orientation="vertical"
+    tools:context="com.huiyin.ui.store.StoreInfoActivity">
+
+    <include
+        layout="@layout/actionbar_common_back"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height" />
+
+    <include
+        layout="@layout/store_info_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

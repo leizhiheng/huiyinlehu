@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/common_title_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_title_bar_height"
+        android:background="@color/index_red" >
+
+        <TextView
+            android:id="@+id/btn_back"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/com_return"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_lage_text_size" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxEms="10"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="我的投诉"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_lage_text_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="您投诉的记录会在此显示，我们会尽快给予答复或处理！"
+        android:textColor="@color/grayfont"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.01dp"
+        android:background="@color/gray" />
+
+    <com.huiyin.wight.XListView
+        android:id="@+id/lv_complaint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0000"
+        android:cacheColorHint="#0000"
+        android:divider="#EDEDED"
+        android:dividerHeight="10dp"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:listSelector="@drawable/list_item_drawable_bg"
+        android:scrollbars="none" />
+
+</LinearLayout>

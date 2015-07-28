@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/upload_lehu_ticket_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="left|center"
+            android:text="发票类型："
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/ticket_type_tv"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/com_black_arraw"
+            android:gravity="center|right"
+            android:paddingRight="10dp"
+            android:text="请选择"
+            android:textColor="#ff9e9e9e"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发票金额："
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/contact_msg_ed"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/grey_cornor_bg"
+            android:digits="1234567890."
+            android:gravity="left|center"
+            android:inputType="numberSigned"
+            android:paddingLeft="3dp"
+            android:singleLine="true"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="上传发票："
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/grey_cornor_soild" >
+
+        <com.huiyin.wight.MyGridView
+            android:id="@+id/upload_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="5dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="5" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/voucher_commit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:background="@drawable/red_cornor_bg"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/white" />
+
+</LinearLayout>

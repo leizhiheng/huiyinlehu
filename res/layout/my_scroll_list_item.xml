@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+    <com.huiyin.wight.CircleImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/my_scroll_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            tools:text="*** 领取了什么"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/my_scroll_textview_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            tools:text="2015/6/16"
+            android:textSize="12sp"
+            android:textColor="#999999"/>
+    </LinearLayout>
+
+</RelativeLayout>

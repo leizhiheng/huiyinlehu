@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="人气组合"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="#ffb6b6b6" />
+
+    <ListView
+        android:id="@+id/pop_select_rqzh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:listSelector="@android:color/transparent"
+        android:divider="@color/gray"
+        android:dividerHeight="0.5dp"
+        android:background="#0000"
+        android:cacheColorHint="#0000"
+        android:scrollbars="none"
+        android:fadeScrollbars="false"/>
+</LinearLayout>

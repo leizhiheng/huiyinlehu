@@ -1,0 +1,311 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEDED"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/common_title_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:background="@color/index_red" >
+
+        <TextView
+            android:id="@+id/left_ib"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/com_return"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_lage_text_size" />
+
+        <TextView
+            android:id="@+id/middle_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxEms="10"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="标题"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_lage_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/right_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_lage_text_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/added_inv_layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_size_8dp"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="单位名称"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/inv_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/grey_cornor_bg"
+                    android:maxLines="2"
+                    android:paddingLeft="5dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_size_8dp"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="纳税人识别号" />
+
+                <EditText
+                    android:id="@+id/inv_identify"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/grey_cornor_bg"
+                    android:maxLines="2"
+                    android:textSize="14sp"
+                    android:paddingLeft="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_size_8dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="注册地址" />
+
+                <EditText
+                    android:id="@+id/inv_regist_addr"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_margin="4dp"
+                    android:textSize="14sp"
+                    android:background="@drawable/grey_cornor_bg"
+                    android:paddingLeft="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_size_8dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="固定电话" />
+
+                <EditText
+                    android:id="@+id/inv_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/grey_cornor_bg"
+                    android:inputType="phone"
+                    android:paddingLeft="5dp"
+                    android:textSize="14sp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_size_8dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开户银行" />
+
+                <EditText
+                    android:id="@+id/inv_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/grey_cornor_bg"
+                    android:maxLines="2"
+                    android:textSize="14sp"
+                    android:paddingLeft="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_size_8dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="银行账号" 
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/inv_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/grey_cornor_bg"
+                    android:inputType="number"
+                    android:maxLines="2"
+                    android:textSize="14sp"
+                    android:paddingLeft="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_size_8dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收票人姓名" 
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/inv_receiver"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/grey_cornor_bg"
+                    android:paddingLeft="5dp"
+                    android:textSize="14sp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_size_8dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收票人手机" 
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/inv_receiver_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/grey_cornor_bg"
+                    android:inputType="phone"
+                    android:textSize="14sp"
+                    android:paddingLeft="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_size_8dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收票人地址" 
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/inv_receiver_addr"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_margin="4dp"
+                    android:textSize="14sp"
+                    android:background="@drawable/grey_cornor_bg"
+                    android:maxLines="2"
+                    android:paddingLeft="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上传图片" 
+                    android:textSize="14sp"/>
+
+                <com.huiyin.wight.MyGridView
+                    android:id="@+id/upload_image_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="4"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="仅支持JPG、GIF、PNG、JPEG、BMP格式，文件少于4M，最多上传1张"
+                    android:textColor="#999"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

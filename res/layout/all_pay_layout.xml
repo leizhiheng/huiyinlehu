@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="none"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="@string/shop_pay_title" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/gray"
+            android:visibility="visible" />
+        <!-- 支付宝网页版 -->
+
+        <LinearLayout
+            android:id="@+id/payway_zfb_web"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/logo_zfb" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/com_black_arraw"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="支付宝网页支付" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/gray"
+            android:visibility="gone" />
+        <!-- 服务卡 -->
+
+        <LinearLayout
+            android:id="@+id/payway_serviceCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/service_card" />
+
+            <TextView
+                android:id="@+id/serviceCard_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/com_black_arraw"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="便民生活服务卡" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/gray"
+            android:visibility="visible" />
+
+        <!-- 支付宝客户端 -->
+
+        <LinearLayout
+            android:id="@+id/payway_zfb_android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/logo_zfb" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/com_black_arraw"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="支付宝客户端" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/gray"
+            android:visibility="visible" />
+
+        <!-- 微信支付 -->
+
+        <LinearLayout
+            android:id="@+id/payway_wx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/logo_wx" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/com_black_arraw"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="微信支付" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/gray"
+            android:visibility="visible" />
+
+        <!-- 财付通 -->
+
+        <LinearLayout
+            android:id="@+id/payway_cft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/logo_cft" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/com_black_arraw"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="财付通网页支付" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/gray"
+            android:visibility="gone" />
+
+        <!-- 银联 -->
+
+        <LinearLayout
+            android:id="@+id/payway_yl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/logo_yl" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/com_black_arraw"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="银联支付" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/gray"
+            android:visibility="visible" />
+
+        <!-- 中国银行 -->
+
+        <LinearLayout
+            android:id="@+id/payway_china_bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/logo_china_bank" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/com_black_arraw"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="中国银行" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/gray"
+            android:visibility="visible" />
+
+        <!-- 中国建行 -->
+
+        <LinearLayout
+            android:id="@+id/payway_construction_bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/logo_construction_bank" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/com_black_arraw"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="中国建设银行" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/gray" />
+    </LinearLayout>
+
+</ScrollView>

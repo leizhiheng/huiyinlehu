@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:id="@+id/store_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/lehu" />
+
+        <TextView
+            android:id="@+id/store_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="乐虎自营"
+            android:textColor="@color/font_black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/store_info_navigator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_next_left" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/gray" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="2"
+        android:maxLines="2"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <com.huiyin.wight.MyListView
+        android:id="@+id/goods_base_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/cornor_clolr"
+        android:dividerHeight="1dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:id="@+id/gift_base_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/horizontal_grey_line_divider_1dp"
+        android:orientation="vertical"
+        android:paddingLeft="40dp"
+        android:paddingRight="10dp"
+        android:showDividers="middle">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/promotion_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="right|center_vertical">
+
+        <Button
+            android:id="@+id/reselect"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/red_cornor_bg"
+            android:gravity="center"
+            android:text="重新选择"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <com.huiyin.wight.DropDownBoxsView
+            android:id="@+id/goods_drop"
+            texthin="--请选择--"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/gray" />
+</LinearLayout>

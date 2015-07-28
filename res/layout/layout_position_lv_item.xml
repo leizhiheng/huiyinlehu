@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/actionbar_height"
+        android:text="广东省"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="@dimen/common_lage_text_size"/>
+    <ImageView
+        android:id="@+id/iv_gou"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/actionbar_height"
+        android:src="@drawable/xz2"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"/>
+
+</RelativeLayout>

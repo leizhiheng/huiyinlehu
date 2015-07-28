@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        layout="@layout/actionbar_common_back_2" />
+
+    <TextView
+        android:id="@+id/hj_total_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dip"
+        android:layout_marginLeft="12dip"
+        android:layout_marginRight="12dip"
+        android:layout_marginTop="12dip"
+        android:gravity="left|center"
+        tools:text="@string/total_useable_hj"
+        android:textColor="#ff484848"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/grey" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dip"
+        android:layout_marginLeft="12dip"
+        android:layout_marginRight="12dip"
+        android:layout_marginTop="12dip"
+        android:gravity="left|center"
+        android:text="输入乐虎券优惠编号"
+        android:textColor="#ff484848"
+        android:textSize="16sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/luj_edit"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:hint=""
+            android:textSize="14sp"
+            android:layout_marginLeft="@dimen/margin_size_8dp"
+            android:background="@drawable/grey_cornor_bg"
+            android:paddingLeft="10dp"
+            android:textColorHint="#999"/>
+        <Button
+            android:id="@+id/lhj_confirm"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:background="@drawable/red_cornor_bg"
+            android:text="确定"
+            android:layout_marginLeft="@dimen/margin_size_8dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            />
+        </LinearLayout>
+    <TextView
+        android:id="@+id/lhj_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dip"
+        android:layout_marginTop="8dip"
+        android:gravity="left|center"
+        tools:text="提示: 输入的优惠券可以使用，面值50.00元"
+        android:textColor="#999"
+        android:textSize="14sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/grey"
+        android:layout_marginTop="8dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dip"
+        android:layout_marginLeft="12dip"
+        android:layout_marginRight="12dip"
+        android:layout_marginTop="12dip"
+        android:gravity="left|center"
+        android:text="已拥有的乐虎优惠券"
+        android:textColor="#ff484848"
+        android:textSize="16sp" />
+    <ListView
+        android:id="@+id/mListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="#ffe7e7e7"
+        android:dividerHeight="0.1dp"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:listSelector="@drawable/common_gray_list_selector"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

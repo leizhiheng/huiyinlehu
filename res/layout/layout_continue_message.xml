@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/common_title_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_title_bar_height"
+        android:background="@color/index_red">
+
+        <TextView
+            android:id="@+id/btn_back"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/com_return"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_lage_text_size" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxEms="10"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="继续留言"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_lage_text_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/add_comment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left|center_vertical"
+            android:text="描述问题："
+            android:textColor="@color/text_color_black" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/grey_cornor_bg"
+            android:padding="3dp">
+
+            <TextView
+                android:id="@+id/comment_content_tip_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:text="@string/text_remark_info_tip_200"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/common_big_text_size" />
+            
+            <EditText
+                android:id="@+id/comment_content_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="top|left"
+                android:layout_above="@id/comment_content_tip_tv"
+                android:hint="@null"
+                android:maxLength="200"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/common_big_text_size" />
+
+            
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left|center_vertical"
+            android:text="上传凭证（选填）"
+            android:textColor="@color/text_color_black" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/grey_cornor_soild"
+            android:padding="1dp">
+
+            <com.huiyin.wight.MyGridView
+                android:id="@+id/upload_add_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="5" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/submit_apply_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/ok_btn_bg"
+            android:gravity="center"
+            android:text="提交诉讼"
+            android:textColor="@color/white" />
+        </LinearLayout>
+</LinearLayout>

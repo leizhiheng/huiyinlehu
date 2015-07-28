@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <com.huiyin.wight.pulltorefresh.PullToRefreshGridView
+        xmlns:pulltorefresh="http://schemas.android.com/apk/res/com.huiyin"
+        android:id="@+id/gridview_menber_club_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        pulltorefresh:ptrAnimationStyle="flip"
+        pulltorefresh:ptrHeaderBackground="@color/gray7"
+        pulltorefresh:ptrMode="disabled"/>
+
+
+</LinearLayout>

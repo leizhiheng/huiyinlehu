@@ -1,0 +1,206 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.huiyin.ui.home.WaterPayFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:src="@drawable/sdm1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="缴费项目:"
+                android:textColor="#999999"/>
+
+            <TextView
+                android:id="@+id/water_payment"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_size_8dp"
+                android:background="@drawable/payment_bg"
+                android:gravity="center"
+                android:text="水费"/>
+
+            <TextView
+                android:id="@+id/electric_payment"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/payment_bg"
+                android:gravity="center"
+                android:text="电费"/>
+
+            <TextView
+                android:id="@+id/coal_payment"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/payment_bg"
+                android:gravity="center"
+                android:text="煤气费"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="缴费地区:"
+                android:textColor="#999999"/>
+
+            <TextView
+                android:id="@+id/water_payment_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_size_8dp"
+                android:gravity="center"
+                tools:text="江苏>扬州市"/>
+
+            <TextView
+                android:id="@+id/water_payment_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_size_8dp"
+                android:drawableLeft="@drawable/dw"
+                android:gravity="center"
+                android:text="重新定位"
+                android:textColor="@color/red"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="缴费用户:"
+                android:textColor="#999999"/>
+
+            <EditText
+                android:id="@+id/water_payment_consumor"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/margin_size_8dp"
+                android:layout_weight="1"
+                android:background="@drawable/grey_cornor_bg"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="手机号码:"
+                android:textColor="#999999"/>
+
+            <EditText
+                android:id="@+id/water_payment_phone"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/margin_size_8dp"
+                android:layout_weight="1"
+                android:background="@drawable/grey_cornor_bg"
+                android:inputType="phone"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="查询月份:"
+                android:textColor="#999999"/>
+
+            <TextView
+                android:id="@+id/water_payment_year"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/margin_size_8dp"
+                android:layout_weight="1"
+                android:background="@drawable/grey_cornor_bg"
+                android:gravity="center"
+                tools:text="2015"
+                />
+
+            <TextView
+                android:id="@+id/water_payment_month"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/margin_size_8dp"
+                android:layout_weight="1"
+                android:background="@drawable/grey_cornor_bg"
+                android:gravity="center"
+                tools:text="10"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:gravity="center|right"
+                android:text="验证码:"
+                android:textColor="#999999"/>
+
+            <EditText
+                android:id="@+id/water_payment_check"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/margin_size_8dp"
+                android:layout_weight="1"
+                android:background="@drawable/grey_cornor_bg"
+                android:gravity="center"
+                tools:text="10"
+                />
+
+            <ImageView
+                android:id="@+id/water_payment_ma"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/margin_size_8dp"
+                android:background="#B6B6B6"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/water_payment_next"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/margin_size_8dp"
+            android:background="@drawable/red_cornor_bg"
+            android:text="下一步"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</ScrollView>

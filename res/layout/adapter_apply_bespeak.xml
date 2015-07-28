@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp" >
+
+    <RelativeLayout
+        android:id="@+id/class_sort_list1_normal"
+        android:layout_width="match_parent"
+        android:layout_height="120dp" >
+
+        <RelativeLayout
+            android:id="@+id/goods_pic_relativelayout"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dip"
+            android:layout_marginRight="8dip" >
+
+            <ImageView
+                android:id="@+id/goods_pic_imageview"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="@null"
+                android:scaleType="centerInside" />
+
+            <ImageView
+                android:id="@+id/goods_check_imageview"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/icon_choice"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/class_sort_list1_normal_ll"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:layout_toRightOf="@id/goods_pic_relativelayout"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/goods_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dip"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="海尔挂式空调海尔挂式空调海尔挂式空调海尔挂式空调海尔挂式空调海尔挂式空调\n"
+                android:textColor="@color/font_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/norms_value_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="颜色:酷劲变频"
+                android:textColor="@color/text_color_black2"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="3dp"
+                android:gravity="left|center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/apply_sub_imageview"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/mashangjiesuan_03"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:id="@+id/apply_product_count_textview"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/grey_cornor_bg"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="1"
+                    android:textColor="@color/text_color_black2"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/apply_add_imageview"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/mashangjiesuna_08"
+                    android:contentDescription="@null" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/recommend_products_item_line" />
+    </RelativeLayout>
+
+</RelativeLayout>

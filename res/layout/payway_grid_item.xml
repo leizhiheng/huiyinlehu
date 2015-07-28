@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="120dp"
+              android:layout_height="35dp"
+              android:background="@drawable/show_search_bg"
+    android:id="@+id/payway_item_bg">
+
+    <ImageView
+        android:id="@+id/payway_item_image"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/payway_item_text"
+        android:src="@drawable/xz2"
+        />
+    <TextView
+        android:id="@+id/payway_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="上门自提"
+        android:gravity="center_vertical"
+        android:layout_centerInParent="true"
+        android:textColor="#999"
+        android:textSize="12sp"
+        android:paddingLeft="2dp"/>
+</RelativeLayout>

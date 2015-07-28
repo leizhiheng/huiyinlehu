@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/actionbar_common_back_btn" />
+
+    <com.huiyin.wight.XListView
+        android:id="@+id/promotion_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:fadingEdge="none"
+        android:listSelector="@drawable/common_gray_list_selector"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

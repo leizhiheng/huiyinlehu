@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#eeeeee"
+                tools:context="com.huiyin.ui.store.StoreLehuActivity">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/actionbar_common_back"/>
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_margin="@dimen/margin_size_8dp"
+        android:background="@drawable/quan"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/text_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/yhj3"
+                android:textColor="#dd434d"
+                android:textSize="24sp"
+                tools:text="5"/>
+
+            <TextView
+                android:id="@+id/text_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="乐虎券"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:background="#dd434d"
+            android:minHeight="50dp">
+        </View>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333"
+                tools:text="母亲节专享"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/text_condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#999"
+                tools:text="有效期"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/check_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content"
+        android:layout_margin="8dp">
+
+
+        <EditText
+            android:id="@+id/edit_check"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/margin_size_8dp"
+            android:layout_weight="1"
+            android:background="@drawable/grey_cornor_bg"
+            android:gravity="center"
+            android:hint="请输入验证码"
+            android:textSize="14sp"
+            />
+
+        <ImageView
+            android:id="@+id/image_ma"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/margin_size_8dp"
+            android:background="#B6B6B6"
+            android:gravity="center"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/margin_size_8dp"
+        android:background="@drawable/red_cornor_bg"
+        android:text="确 定"
+        android:textColor="@color/white"
+        android:layout_below="@+id/check_ll"/>
+</RelativeLayout>

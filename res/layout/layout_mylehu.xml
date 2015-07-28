@@ -1,0 +1,1195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#ffe7e7e7"
+    android:fadingEdge="none"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/lehu_bg" >
+
+            <!-- 未登录部分 -->
+
+            <RelativeLayout
+                android:id="@+id/unlogin_part_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/lehu_unlogin_head"
+                    android:layout_width="70dip"
+                    android:layout_height="70dip"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/default_head"
+                    android:scaleType="fitCenter" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lehu_unlogin_head"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/lehu_login_id"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_margin="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/mylehu_btn_login_selector"
+                        android:gravity="center"
+                        android:text="登录"
+                        android:textColor="#ff484848"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/lehu_register_id"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_margin="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/mylehu_btn_login_selector"
+                        android:gravity="center"
+                        android:text="注册"
+                        android:textColor="#ff9e9e9e"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- 登录部分 -->
+
+            <RelativeLayout
+                android:id="@+id/login_part1_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" 
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/user_setting_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true" >
+
+                    <!-- 设置按钮 -->
+
+                    <ImageView
+                        android:id="@+id/user_setting"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerInside"
+                        android:layout_marginLeft="10dp"
+                        android:padding="6dp"
+                        android:src="@drawable/setting_icon" />
+
+                    <!-- 最后登录 -->
+
+                    <LinearLayout
+                        android:id="@+id/last_login_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/user_setting"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/lehu_user_lastest_login"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="最后登录：2014-7-32 09:54"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="@dimen/common_small_text_size" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/new_msg_layout"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp" >
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:contentDescription="@null"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/icon_messag" />
+
+                        <View
+                            android:id="@+id/new_msg_tip_tv"
+                            android:layout_width="5dp"
+                            android:layout_height="5dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/shape_circle_red"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/user_attention_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:background="#6e525E6A"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:id="@+id/tv_my_attention"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="46\n我的关注"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/common_big_text_size" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="5dp"
+                        android:background="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_browse"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="42\n浏览记录"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/common_big_text_size" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/user_attention_layout"
+                    android:layout_below="@id/user_setting_layout"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <com.huiyin.wight.CircleImageView
+                        android:id="@+id/lehu_login_head"
+                        android:layout_width="70dip"
+                        android:layout_height="70dip"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/default_head" />
+
+                    <!-- 签到 -->
+
+                    <LinearLayout
+                        android:id="@+id/sign_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="-2dp"
+                        android:gravity="right"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="@drawable/sharp_left_circle"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/tv_sign"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="10dp"
+                                android:drawableLeft="@drawable/qdao"
+                                android:gravity="center_vertical"
+                                android:singleLine="true"
+                                android:text="已签到"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/common_big_text_size" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_sign_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_vertical"
+                            android:paddingTop="5dp"
+                            android:text="已签到36次"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/common_small_text_size" />
+
+                        <TextView
+                            android:id="@+id/tv_sign_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:gravity="center_vertical|right"
+                            android:padding="5dp"
+                            android:text="2015-06-08"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/common_small_text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/sign_layout"
+                        android:layout_toRightOf="@id/lehu_login_head"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/lehu_user_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:singleLine="true"
+                            android:text="159504528526"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/common_big_text_size" />
+
+                        <LinearLayout
+                            android:id="@+id/lehu_user_level_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/lehu_user_level_imgview"
+                                android:layout_width="20dp"
+                                android:layout_height="30dp"
+                                android:contentDescription="@null"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/hy0" />
+
+                            <TextView
+                                android:id="@+id/lehu_user_level"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="普通会员"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/common_big_text_size" />
+                        </LinearLayout>
+                        
+
+                        <!-- 账户、收货地址管理 -->
+
+                        <TextView
+                            android:id="@+id/tv_user_adress_manage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:drawableRight="@drawable/icon_jiantou_white"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="我的账户"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/common_small_text_size" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ffb6b6b6" />
+
+        <!-- 全部订单 -->
+
+        <RelativeLayout
+            android:id="@+id/lehu_all_order"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/mylehu_item_selector" >
+
+            <ImageView
+                android:id="@+id/lehu_order_image_id"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/lehu_dingdan"
+                android:scaleType="center" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/lehu_order_image_id" >
+
+                <TextView
+                    android:id="@+id/all_order_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:text="全部订单"
+                    android:textColor="#ff484848"
+                    android:textSize="@dimen/common_big_text_size" />
+
+                <TextView
+                    android:id="@+id/lehu_sq_num"
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/com_black_arraw"
+                    android:gravity="center"
+                    android:paddingRight="10dp"
+                    android:text=""
+                    android:textColor="#ff9e9e9e"
+                    android:textSize="@dimen/common_text_size" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ffb6b6b6" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff6f6f6"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <!-- 待支付 -->
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25" >
+
+                    <TextView
+                        android:id="@+id/waitpay_orderlist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableTop="@drawable/qianbao"
+                        android:gravity="center"
+                        android:text="待付款"
+                        android:textColor="#ff484848"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/waitpay_ordernum"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="-10dp"
+                        android:background="@drawable/bg_radius_count_red"
+                        android:gravity="center"
+                        android:text="99+"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ff484848"
+                    android:visibility="gone" />
+
+                <!-- 待收货 -->
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25" >
+
+                    <TextView
+                        android:id="@+id/waitreceive_orderlist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableTop="@drawable/shouh"
+                        android:gravity="center"
+                        android:text="待收货"
+                        android:textColor="#ff484848"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/waitreceive_ordernum"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/bg_radius_count_red"
+                        android:gravity="center"
+                        android:text="99+"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ff484848"
+                    android:visibility="gone" />
+
+                <!-- 待评价 -->
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25" >
+
+                    <TextView
+                        android:id="@+id/waitcomment_orderlist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableTop="@drawable/bji"
+                        android:gravity="center"
+                        android:text="待评价"
+                        android:textColor="#ff484848"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/waitcomment_ordernum"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/bg_radius_count_red"
+                        android:gravity="center"
+                        android:text="99+"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ff484848"
+                    android:visibility="gone" />
+
+                <!-- 退换货中 -->
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25" >
+
+                    <TextView
+                        android:id="@+id/backgood_orderlist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableTop="@drawable/duih"
+                        android:gravity="center"
+                        android:text="预约/退换"
+                        android:textColor="#ff484848"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/backgood_ordernum"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/bg_radius_count_red"
+                        android:gravity="center"
+                        android:text="99+"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ffb6b6b6"
+            android:visibility="gone" />
+
+        <!-- 我的乐虎 -->
+
+        <RelativeLayout
+            android:id="@+id/lehu_my_lhj"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/mylehu_item_selector"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/lehujuan_image_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/lehu_quan"
+                android:scaleType="center" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/lehujuan_image_id" >
+
+                <TextView
+                    android:id="@+id/lehuquan_total_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:text="@string/lehujuan_total"
+                    android:textColor="#ff484848"
+                    android:textSize="@dimen/common_big_text_size" />
+
+                <TextView
+                    android:id="@+id/lehuquan_past"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/com_black_arraw"
+                    android:gravity="center"
+                    android:paddingRight="10dp"
+                    android:textColor="#ff9e9e9e"
+                    android:textSize="@dimen/common_text_size" />
+                <!-- android:text="@string/lehujuan_past" -->
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ffb6b6b6"
+            android:visibility="gone" />
+        <!-- 便民生活服务卡 -->
+
+        <RelativeLayout
+            android:id="@+id/lehu_fuwu"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/mylehu_item_selector"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/lehu_fuwu_image_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/yufuka"
+                android:scaleType="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/lehu_fuwu_image_id"
+                android:gravity="left|center"
+                android:paddingRight="10dp"
+                android:text="便民生活服务卡"
+                android:textColor="#ff484848"
+                android:textSize="@dimen/common_big_text_size" />
+
+            <TextView
+                android:id="@+id/lehu_fuwu_info"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/com_black_arraw"
+                android:gravity="center|right"
+                android:paddingRight="10dp"
+                android:text="您还未绑定"
+                android:textColor="#ff9e9e9e"
+                android:textSize="@dimen/common_text_size" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ffb6b6b6" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginTop="20dip"
+            android:background="#ffb6b6b6" />
+        <!-- 我的资产 -->
+
+        <LinearLayout
+            android:id="@+id/layout_assets"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/mylehu_item_selector"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_assets" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawableRight="@drawable/com_black_arraw"
+                android:gravity="left|center"
+                android:text="我的资产"
+                android:textColor="#ff484848"
+                android:textSize="@dimen/common_big_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ffb6b6b6" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_redpackage"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mylehu_item_selector"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:lineSpacingMultiplier="1.5"
+                android:text="0.00\n红包"
+                android:textSize="14sp" />
+
+            <!-- 积分 -->
+
+            <TextView
+                android:id="@+id/tv_integral"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mylehu_item_selector"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:lineSpacingMultiplier="1.5"
+                android:text="0.00\n积分"
+                android:textSize="14sp" />
+            <!-- 红包券 -->
+
+            <TextView
+                android:id="@+id/tv_red"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mylehu_item_selector"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:lineSpacingMultiplier="1.5"
+                android:text="0.00\n红包券"
+                android:textSize="14sp" />
+            <!-- 便民生活服务卡 -->
+
+            <TextView
+                android:id="@+id/tv_convenience"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mylehu_item_selector"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:lineSpacingMultiplier="1.5"
+                android:text="0.00\n便民服务"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ffb6b6b6" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginTop="20dip"
+            android:background="#ffb6b6b6" />
+        <!-- 我的服务 -->
+
+        <LinearLayout
+            android:id="@+id/layout_my_service"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/mylehu_item_selector" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/fw"
+                android:scaleType="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/lehu_order_image_id" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:text="我的服务"
+                    android:textColor="#ff484848"
+                    android:textSize="@dimen/common_big_text_size" />
+
+                <TextView
+                    android:id="@+id/complaint_textview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/com_black_arraw"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:text="我的投诉、预购等  "
+                    android:textColor="#ff9e9e9e"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ffb6b6b6" />
+
+        <!-- 会员乐虎 -->
+
+        <LinearLayout
+            android:id="@+id/layout_vip"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/mylehu_item_selector" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/hy"
+                android:scaleType="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/lehu_order_image_id" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:text="会员乐虎"
+                    android:textColor="#ff484848"
+                    android:textSize="@dimen/common_big_text_size" />
+
+                <TextView
+                    android:id="@+id/club_textview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/com_black_arraw"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:text="会员俱乐部  "
+                    android:textColor="#ff9e9e9e"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ffb6b6b6"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginTop="20dip"
+            android:background="#ffb6b6b6"
+            android:visibility="gone" />
+        <!-- 我的预约 -->
+
+        <RelativeLayout
+            android:id="@+id/lehu_my_bespeak"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/mylehu_item_selector"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/lehu_bespeak_image_id"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/lehu_bespeak"
+                android:scaleType="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/lehu_bespeak_image_id"
+                android:drawableRight="@drawable/com_black_arraw"
+                android:gravity="left|center"
+                android:paddingRight="10dp"
+                android:text="我的预约"
+                android:textColor="#ff484848"
+                android:textSize="@dimen/common_big_text_size" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ffb6b6b6"
+            android:visibility="gone" />
+
+        <!-- 我的收藏 -->
+
+        <RelativeLayout
+            android:id="@+id/lehu_my_collect"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/mylehu_item_selector"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/lehu_collect_image_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/lehu_collect"
+                android:scaleType="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/lehu_collect_image_id"
+                android:drawableRight="@drawable/com_black_arraw"
+                android:gravity="left|center"
+                android:paddingRight="10dp"
+                android:text="我的收藏"
+                android:textColor="#ff484848"
+                android:textSize="@dimen/common_big_text_size" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ffb6b6b6"
+            android:visibility="gone" />
+
+        <!-- 我的举报 -->
+
+        <RelativeLayout
+            android:id="@+id/lehu_my_report"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/mylehu_item_selector"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/lehu_report_image_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/lehu_collect"
+                android:scaleType="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/lehu_report_image_id"
+                android:drawableRight="@drawable/com_black_arraw"
+                android:gravity="left|center"
+                android:paddingRight="10dp"
+                android:text="我的举报"
+                android:textColor="#ff484848"
+                android:textSize="@dimen/common_big_text_size" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ffb6b6b6"
+            android:visibility="gone" />
+
+        <!-- 系统消息 -->
+
+        <RelativeLayout
+            android:id="@+id/lehu_message"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/mylehu_item_selector"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/lehu_message_image_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/lehu_msg"
+                android:scaleType="center" />
+
+            <TextView
+                android:id="@+id/lehu_msg_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/lehu_message_image_id"
+                android:drawableRight="@drawable/com_black_arraw"
+                android:gravity="left|center"
+                android:paddingRight="10dp"
+                android:text="@string/system_msg"
+                android:textColor="#ff484848"
+                android:textSize="@dimen/common_big_text_size" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ffb6b6b6"
+            android:visibility="gone" />
+
+        <!-- 安装预约维修 -->
+
+        <RelativeLayout
+            android:id="@+id/lehu_yuyue"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/mylehu_item_selector"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/lehu_yuyue_image_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/lehu_yuyue"
+                android:scaleType="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/lehu_yuyue_image_id"
+                android:drawableRight="@drawable/com_black_arraw"
+                android:gravity="left|center"
+                android:paddingRight="10dp"
+                android:text="安装维修预约"
+                android:textColor="#ff484848"
+                android:textSize="@dimen/common_big_text_size" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ffb6b6b6"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginTop="30dip"
+            android:background="#ffb6b6b6"
+            android:visibility="gone" />
+
+        <!-- 账户管理 -->
+
+        <RelativeLayout
+            android:id="@+id/lehu_account_manage"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/mylehu_item_selector"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/lehu_account_manage_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/lehu_account"
+                android:scaleType="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/lehu_account_manage_image"
+                android:drawableRight="@drawable/com_black_arraw"
+                android:gravity="left|center"
+                android:paddingRight="10dp"
+                android:text="账户管理"
+                android:textColor="#ff484848"
+                android:textSize="@dimen/common_big_text_size" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ffb6b6b6"
+            android:visibility="gone" />
+
+        <!-- 用户中心 -->
+
+        <RelativeLayout
+            android:id="@+id/lehu_user_center"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/mylehu_item_selector"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/lehu_user_image_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/lehu_center"
+                android:scaleType="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/lehu_user_image_id"
+                android:drawableRight="@drawable/com_black_arraw"
+                android:gravity="left|center"
+                android:paddingRight="10dp"
+                android:text="客服中心"
+                android:textColor="#ff484848"
+                android:textSize="@dimen/common_big_text_size" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ffb6b6b6"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/lehu_test"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/mylehu_item_selector"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/lehu_test_image_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/lehu_center"
+                android:scaleType="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/lehu_test_image_id"
+                android:drawableRight="@drawable/com_black_arraw"
+                android:gravity="left|center"
+                android:paddingRight="10dp"
+                android:text="测试"
+                android:textColor="#ff484848"
+                android:textSize="@dimen/common_big_text_size" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ffb6b6b6" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginTop="20dip"
+            android:background="#ffb6b6b6" />
+
+        <!-- 浏览记录 -->
+
+        <LinearLayout
+            android:id="@+id/brower_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff6f6f6"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="12dip"
+                android:layout_marginTop="10dip"
+                android:text="猜你喜欢"
+                android:textColor="#ff484848"
+                android:textSize="16sp" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/guess_you_like_pager"
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

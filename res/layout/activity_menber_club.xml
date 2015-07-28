@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/common_title_layout" />
+
+    <RelativeLayout
+        android:id="@+id/layout_menber_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_title"
+        android:background="@drawable/lehu_bg"
+        android:gravity="center_vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="15dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.huiyin.wight.CircleImageView
+                android:id="@+id/menber_icon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="@dimen/margin_size_4dp"
+                android:background="@drawable/icon_head" />
+
+            <ImageView
+                android:id="@+id/menber_level_logo"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/menber_icon"
+                android:src="@drawable/hy0" />
+
+            <TextView
+                android:id="@+id/menber_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/menber_icon"
+                android:layout_toRightOf="@+id/menber_level_logo"
+                android:text="会员等级"
+                android:textColor="@color/white"
+                android:textSize="14sp" >
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/layout_icon"
+            android:layout_toRightOf="@id/layout_icon" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_menber_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    tools:text="BaShan" />
+
+                <TextView
+                    android:id="@+id/tv_rest_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/px_to_dip_8"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    tools:text="剩余积分：" />
+
+                <TextView
+                    android:id="@+id/tv_next_level_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/px_to_dip_8"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    tools:text="还需250成长值就可升级到黄金会员" />
+
+                <com.huiyin.wight.SpringProgressView
+                    android:id="@+id/member_rank_level_bar"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/button_chouj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_tuoyuan_baikuang"
+            android:padding="5dp"
+            android:text="@string/choujiang"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/view_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_broadcast"
+        android:layout_below="@id/layout_menber_message"
+        android:visibility="gone" >
+
+        <com.huiyin.wight.indicator.TabPageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/white" />
+
+        <View
+            android:id="@+id/view_id_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/indicator"
+            android:background="@color/gray" >
+        </View>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/view_id_1" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_broadcast"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray7" >
+
+        <ImageView
+            android:id="@+id/iv_broadcast"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/xiaoxi" />
+
+        <ListView
+            android:id="@+id/my_scroll_list"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/iv_broadcast"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+</RelativeLayout>

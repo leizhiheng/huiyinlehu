@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="5" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/line_head"
+            android:layout_width="0.1dp"
+            android:layout_height="20dp"
+            android:background="@color/gray" />
+
+        <com.huiyin.wight.CircleImageView
+            android:id="@+id/civ_logo"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:src="@drawable/default_head" />
+
+        <View
+            android:id="@+id/line_foot"
+            android:layout_width="0.1dp"
+            android:layout_height="fill_parent"
+            android:background="@color/gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="4"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_name_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="您的留言      2015/04/25 08:30:12"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/common_big_text_size" />
+
+        <LinearLayout
+            android:id="@+id/layout_first"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="投诉问题："
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/common_big_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="alskdflksadlf;kjas"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_big_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="补充说明："
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/common_big_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_describ"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="alskdflksadlf;kjas"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_big_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="投诉内容很多粉丝发水电费水电费水电费水电费水电费水电费水电费是否对方是否是对方是否打算放水电费水电费水电费水电费色粉色的"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_big_text_size" />
+
+        <GridView
+            android:id="@+id/upload_add_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:horizontalSpacing="3dp"
+            android:verticalSpacing="3dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="5" />
+
+        <View
+            android:id="@+id/line_end"
+            android:layout_width="fill_parent"
+            android:layout_height="0.1dp"
+            android:layout_margin="10dp"
+            android:background="@color/gray" />
+    </LinearLayout>
+
+</LinearLayout>

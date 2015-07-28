@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    >
+    <com.huiyin.wight.tagview.TagView
+        android:id="@+id/tagview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:lineMargin="5dp"
+        app:tagMargin="3dp"
+        app:textPaddingBottom="5dp"
+        app:textPaddingLeft="8dp"
+        app:textPaddingRight="8dp"
+        app:textPaddingTop="5dp" />
+
+</LinearLayout>

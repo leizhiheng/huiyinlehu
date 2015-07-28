@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" 
+        android:background="@color/gray6">
+
+        <TextView
+            android:id="@+id/first_id"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="当前红包：" />
+
+        <TextView
+            android:id="@+id/hongbao_totalnum_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/first_id"
+            android:gravity="center"
+            android:textColor="@color/red_color" />
+
+        <TextView
+            android:id="@+id/hongbao_instructions"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/red_cornor_bg"
+            android:gravity="center"
+            android:text="红包说明"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dip"
+        >
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="赠送好友红包"
+             android:textSize="@dimen/common_lage_text_size"
+             android:gravity="center"
+            android:layout_gravity="center_horizontal"/>
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="好友电话号码："
+	            android:textSize="14sp"/>   
+
+	        <EditText
+	            android:id="@+id/phone_et"
+	            android:layout_width="144dp"
+	            android:layout_height="40dp"
+	            android:layout_marginLeft="10dp"
+	            android:layout_toRightOf="@id/view_id_1"
+	            android:background="@drawable/login_layout_bg"
+	            android:gravity="left|center"
+	            android:hint="手机号码"
+	            android:paddingLeft="10dp"
+	            android:paddingRight="10dip"
+	            android:textColor="#ff484848"
+	            android:textColorHint="#ffb6b6b6"
+	            android:textSize="14sp" 
+	            android:inputType="phone"/>
+
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="赠送红包金额："
+	            android:textSize="14sp"/>   
+
+	        <EditText
+	            android:id="@+id/hongbao_et"
+	            android:layout_width="144dp"
+	            android:layout_height="40dp"
+	            android:layout_marginLeft="10dp"
+	            android:layout_toRightOf="@id/view_id_1"
+	            android:background="@drawable/login_layout_bg"
+	            android:gravity="left|center"
+	            android:hint="红包金额"
+	            android:paddingLeft="10dp"
+	            android:paddingRight="10dip"
+	            android:textColor="#ff484848"
+	            android:textColorHint="#ffb6b6b6"
+	            android:textSize="14sp"
+	            android:inputType="number" />
+	        
+	        <Button
+                android:id="@+id/give_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/red_cornor_bg"
+                android:text="赠送"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_marginLeft="5dp" 
+                android:inputType="number"/>
+
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grey" />
+
+    <com.huiyin.wight.XListView
+        android:id="@+id/xlist_jifen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0000"
+        android:cacheColorHint="#0000"
+        android:divider="#0000"
+        android:dividerHeight="10dp"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:listSelector="@drawable/list_item_drawable_bg"
+        android:scrollbars="none" />
+
+</LinearLayout>
